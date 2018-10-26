@@ -1,4 +1,4 @@
-package io.mosip.kernel.auditmanager.handler;
+package io.mosip.kernel.auditmanager.impl;
 
 import org.modelmapper.ModelMapper;
 import io.mosip.kernel.core.spi.auditmanager.AuditHandler;
@@ -19,7 +19,7 @@ import io.mosip.kernel.auditmanager.util.AuditUtils;
  *
  */
 @Service
-public class AuditRequestHandler implements AuditHandler<AuditRequestDto> {
+public class AuditHandlerImpl implements AuditHandler<AuditRequestDto> {
 
 	/**
 	 * Field for {@link AuditRepository} having data access operations related to
