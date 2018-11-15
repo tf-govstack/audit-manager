@@ -1,4 +1,4 @@
-package io.mosip.kernel.auditmanager.exceptionhandler;
+package io.mosip.kernel.auditmanager.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ErrorItem {
+public class Error {
 
 	/**
 	 * The error code field
