@@ -1,37 +1,27 @@
-package io.mosip.kernel.auditmanager.test;
+package io.mosip.kernel.auditmanager.test.service;
 
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.time.LocalDateTime;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import io.mosip.auditmanager.test.AuditManagerTestBootApplication;
+import io.mosip.kernel.auditmanager.dto.AuditResponseDto;
 import io.mosip.kernel.auditmanager.request.AuditRequestDto;
-import io.mosip.kernel.auditmanager.util.AuditAsyncUtil;
-import io.mosip.kernel.core.auditmanager.spi.AuditHandler;
+import io.mosip.kernel.auditmanager.service.impl.AuditManagerServiceImpl;
 
+@SpringBootTest(classes = { AuditManagerTestBootApplication.class })
 @RunWith(SpringRunner.class)
-@SpringBootTest
-public class AuditUtilTest {
+public class AuditServiceTest {
 
-	@InjectMocks
-	private AuditAsyncUtil auditAsyncUtil;
-
-	@Mock
-	private AuditHandler<AuditRequestDto> auditHandler;
-
-	@Before
-	public void initMocks() {
-		MockitoAnnotations.initMocks(this);
-	}
+	@Autowired
+	private AuditManagerServiceImpl service;
 
 	@Test
 	public void auditServiceTest() {
@@ -54,7 +44,9 @@ public class AuditUtilTest {
 		auditRequestDto.setSessionUserId("sessionUserId");
 		auditRequestDto.setSessionUserName("sessionUserName");
 
-		auditAsyncUtil.addAudit(auditRequestDto);
-		verify(auditHandler, times(1)).addAudit(auditRequestDto);
+		AuditResponseDto auditResponseDto = new AuditResponseDto();
+		auditResponseDto.setStatus(true);
+
+		assertThat(service.addAudit(auditRequestDto), is(auditResponseDto));
 	}
 }
