@@ -23,7 +23,7 @@ import io.mosip.kernel.auditmanager.exception.AuditAsyncExceptionHandler;
  */
 @Configuration
 @EnableAsync
-public class Config implements AsyncConfigurer {
+public class AsyncConfig implements AsyncConfigurer {
 
 	/*
 	 * (non-Javadoc)
@@ -48,7 +48,7 @@ public class Config implements AsyncConfigurer {
 	public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
 		return new AuditAsyncExceptionHandler();
 	}
-	
+
 	/**
 	 * @return the registered filter to the context.
 	 */
