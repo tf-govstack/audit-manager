@@ -1,4 +1,4 @@
-package io.mosip.kernel.auditmanager;
+package io.mosip.auditmanager.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0.0
  *
  */
-@SpringBootApplication(scanBasePackages = { "io.mosip.kernel.auditmanager.*", "io.mosip.kernel.auth.*" })
-public class AuditManagerBootApplication {
+@SpringBootApplication(scanBasePackages = { "io.mosip.kernel.auditmanager.*" })
+public class AuditManagerTestBootApplication {
 
 	/**
 	 * Main method to run spring boot application
@@ -19,6 +19,6 @@ public class AuditManagerBootApplication {
 	 * @param args args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(AuditManagerBootApplication.class, args);
+		SpringApplication.run(AuditManagerTestBootApplication.class, args);
 	}
 }
