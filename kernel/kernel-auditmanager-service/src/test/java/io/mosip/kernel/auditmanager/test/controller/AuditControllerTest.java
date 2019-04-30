@@ -1,4 +1,4 @@
-package io.mosip.kernel.auditmanager.test;
+package io.mosip.kernel.auditmanager.test.controller;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.when;
@@ -16,18 +16,22 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import io.mosip.auditmanager.test.AuditManagerTestBootApplication;
 import io.mosip.kernel.auditmanager.dto.AuditResponseDto;
 import io.mosip.kernel.auditmanager.request.AuditRequestDto;
 import io.mosip.kernel.auditmanager.service.impl.AuditManagerServiceImpl;
+import io.mosip.kernel.core.http.RequestWrapper;
 
+@SpringBootTest(classes = { AuditManagerTestBootApplication.class })
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
-@SpringBootTest
+
 public class AuditControllerTest {
 
 	@MockBean
@@ -39,6 +43,7 @@ public class AuditControllerTest {
 	@Autowired
 	private ObjectMapper objectMapper;
 
+	@WithUserDetails("reg-processor")
 	@Test
 	public void auditTest() throws Exception {
 
@@ -64,11 +69,12 @@ public class AuditControllerTest {
 		auditResponseDto.setStatus(true);
 		when(service.addAudit(ArgumentMatchers.any())).thenReturn(auditResponseDto);
 
-		mockMvc.perform(post("/v1.0/audits").contentType(MediaType.APPLICATION_JSON)
-				.content(objectMapper.writeValueAsString(auditRequestDto))).andExpect(status().isOk())
-				.andExpect(jsonPath("$.status", is(true)));
+		RequestWrapper<AuditRequestDto> request = new RequestWrapper<>();
+		request.setRequest(auditRequestDto);
 
-
+		mockMvc.perform(post("/audits").contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(request))).andExpect(status().isOk())
+				.andExpect(jsonPath("$.response.status", is(true)));
 	}
 
 }
