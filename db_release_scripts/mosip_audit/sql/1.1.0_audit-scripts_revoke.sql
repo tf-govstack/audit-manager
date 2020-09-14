@@ -1,9 +1,9 @@
 -- -------------------------------------------------------------------------------------------------
 -- Database Name: mosip_audit
--- Release Version 	: 1.0.9
--- Purpose    		: Database Alter scripts for the release for Audit DB.       
+-- Release Version 	: 1.1.0
+-- Purpose    		: Revoking Database Alter deployement done for release in Audit DB.       
 -- Create By   		: Sadanandegowda DM
--- Created Date		: 20-Apr-2020
+-- Created Date		: May-2020
 -- 
 -- Modified Date        Modified By         Comments / Remarks
 -- -------------------------------------------------------------------------------------------------
