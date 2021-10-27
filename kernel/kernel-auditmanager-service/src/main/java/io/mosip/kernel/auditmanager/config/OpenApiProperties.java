@@ -11,7 +11,6 @@ import java.util.List;
 public class OpenApiProperties {
     private InfoProperty info;
     private Service service;
-    private Group group;
 }
 
 @Data
@@ -37,10 +36,4 @@ class Service {
 class Server {
     private String description;
     private String url;
-}
-
-@Data
-class Group {
-    private String name;
-    private List<String> paths;
 }
