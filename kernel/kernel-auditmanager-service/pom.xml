@@ -223,6 +223,7 @@
 		<kernel.dataaccess-hibernate.version>1.2.0-SNAPSHOT</kernel.dataaccess-hibernate.version>
 		<kernel.audit-api.version>1.2.0-SNAPSHOT</kernel.audit-api.version>
 		<kernel.logger.version>1.2.0-SNAPSHOT</kernel.logger.version>
+		<springdoc.version>1.5.10</springdoc.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -269,6 +270,16 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<version>${spring.security.test.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
 		</dependency>
 	</dependencies>
 	
