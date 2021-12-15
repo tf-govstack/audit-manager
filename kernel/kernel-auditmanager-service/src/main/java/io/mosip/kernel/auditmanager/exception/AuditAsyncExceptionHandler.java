@@ -21,7 +21,9 @@ public class AuditAsyncExceptionHandler implements AsyncUncaughtExceptionHandler
 	/**
 	 * Field for ObjectMapper
 	 */
-	private static final ObjectMapper MAPPER = new ObjectMapper();
+	private static final ObjectMapper MAPPER = JsonMapper.builder()
+		    .addModule(new AfterburnerModule())
+		    .build();
 
 	/*
 	 * (non-Javadoc)
