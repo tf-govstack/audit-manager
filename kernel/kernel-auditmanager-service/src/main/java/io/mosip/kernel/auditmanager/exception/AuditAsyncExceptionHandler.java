@@ -6,6 +6,8 @@ import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
 
 import io.mosip.kernel.auditmanager.config.AuditManagerLogger;
 
@@ -21,7 +23,7 @@ public class AuditAsyncExceptionHandler implements AsyncUncaughtExceptionHandler
 	/**
 	 * Field for ObjectMapper
 	 */
-	private static final ObjectMapper MAPPER = new ObjectMapper();
+	private static final ObjectMapper MAPPER = JsonMapper.builder().addModule(new AfterburnerModule()).build();
 
 	/*
 	 * (non-Javadoc)
