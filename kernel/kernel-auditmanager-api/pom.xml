@@ -117,6 +117,8 @@
 		<kernel.core.version>1.2.0-SNAPSHOT</kernel.core.version>
 		<kernel.dataaccess-hibernate.version>1.2.0-SNAPSHOT</kernel.dataaccess-hibernate.version>
 		<jacoco.maven.plugin.version>0.8.5</jacoco.maven.plugin.version>
+		<sonar.coverage.exclusions>**/constant/**,**/config/**,**/httpfilter/**,**/cache/**,**/entity/**,**/model/**,**/exception/**,**/repository/**,**/verticle/**,**/spi/**,"**/proxy/**"</sonar.coverage.exclusions>
+		<sonar.cpd.exclusions>**/dto/**,**/entity/**,**/config/**</sonar.cpd.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>
