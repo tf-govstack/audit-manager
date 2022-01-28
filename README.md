@@ -1,9 +1,5 @@
 
-[![Build Status](https://travis-ci.org/mosip/registration.svg?branch=master)](https://travis-ci.org/mosip/registration)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mosip_registration&metric=alert_status)](https://sonarcloud.io/dashboard?id=mosip_registration)
-[![Join the chat at https://gitter.im/mosip-community/registration](https://badges.gitter.im/mosip-community/registration.svg)](https://gitter.im/mosip-community/registration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-# Commons
+# Audit Manager
 
 ## Overview
 This repository contains modules used for audit related funtionalities. 
@@ -25,10 +21,10 @@ The project requires JDK 1.11.
     ```
 
 ## Deploy
-To deploy Commons services on Kubernetes cluster using Dockers refer to [Sandbox Deployment](https://docs.mosip.io/1.2.0/deployment/sandbox-deployment).
+To deploy service on Kubernetes cluster using Dockers refer to [Sandbox Deployment](https://docs.mosip.io/1.2.0/deployment/sandbox-deployment).
 
 ## Test
-Automated functaionl tests available in [Functional Tests repo](https://github.com/mosip/mosip-functional-tests).
+Automated functional tests available in [Functional Tests repo](https://github.com/mosip/mosip-functional-tests).
 
 ## APIs
 API documentation is available [here](https://mosip.github.io/documentation/).
