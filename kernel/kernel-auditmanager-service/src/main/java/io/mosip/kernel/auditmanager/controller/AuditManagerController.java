@@ -32,7 +32,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  *
  */
 @RestController
-@CrossOrigin
 @Tag(name = "Audit manager controller", description = "Rest endpoints which consist of operations related to Audit Management")
 public class AuditManagerController {
 	/**
