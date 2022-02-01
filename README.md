@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mosip/audit-manager.svg)](https://travis-ci.org/mosip/audit-manager)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mosip_audit-manager&metric=alert_status)](https://sonarcloud.io/dashboard?branch=1.2.0-rc2&id=mosip_audit-manager)
 
 # Audit Manager
 
