@@ -5,7 +5,7 @@
 	<groupId>io.mosip.kernel</groupId>
 
 	<artifactId>kernel-auditmanager-service</artifactId>
-	<version>1.1.5.5-SNAPSHOT</version>
+	<version>1.1.5.6-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -221,7 +221,7 @@
 		<kernel.auth-adapter.version>1.1.5.3</kernel.auth-adapter.version>
 		<kernel.applicant-type.version>1.1.5.3</kernel.applicant-type.version>
 		<kernel.dataaccess-hibernate.version>1.1.5.3</kernel.dataaccess-hibernate.version>
-		<kernel.audit-api.version>1.1.5.5-SNAPSHOT</kernel.audit-api.version>
+		<kernel.audit-api.version>1.1.5.6-SNAPSHOT</kernel.audit-api.version>
 		<kernel.logger.version>1.1.5.3</kernel.logger.version>
 	</properties>
 	<dependencies>
