@@ -7,7 +7,7 @@ import io.mosip.kernel.auditmanager.dto.AuditResponseDto;
 import io.mosip.kernel.auditmanager.entity.Audit;
 import io.mosip.kernel.auditmanager.request.AuditRequestDto;
 import io.mosip.kernel.auditmanager.service.AuditManagerService;
-import io.mosip.kernel.auditmanager.util.AuditAsyncUtil;
+import io.mosip.kernel.core.auditmanager.spi.AuditHandler;
 
 /**
  * AuditManager service implementation with function to add new {@link Audit}
@@ -23,7 +23,7 @@ public class AuditManagerServiceImpl implements AuditManagerService {
 	 * Field for audit handler
 	 */
 	@Autowired
-	private AuditAsyncUtil auditUtil;
+	private AuditHandler<AuditRequestDto> auditHandler;
 
 	/*
 	 * (non-Javadoc)
@@ -35,7 +35,7 @@ public class AuditManagerServiceImpl implements AuditManagerService {
 	@Override
 	public AuditResponseDto addAudit(AuditRequestDto auditRequestDto) {
 		AuditResponseDto auditResponseDto = new AuditResponseDto();
-		auditUtil.addAudit(auditRequestDto);
+		auditHandler.addAudit(auditRequestDto);
 		auditResponseDto.setStatus(true);
 		return auditResponseDto;
 	}
