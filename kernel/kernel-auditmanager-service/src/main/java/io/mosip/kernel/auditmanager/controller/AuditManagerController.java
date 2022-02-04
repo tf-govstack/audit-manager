@@ -60,6 +60,9 @@ public class AuditManagerController {
 	public ResponseWrapper<AuditResponseDto> addAudit(@RequestBody @Valid RequestWrapper<AuditRequestDto> requestDto) {
 		ResponseWrapper<AuditResponseDto> response = new ResponseWrapper<>();
 		response.setResponse(service.addAudit(requestDto.getRequest()));
+		response.setId(requestDto.getId());
+		response.setVersion(requestDto.getVersion());
+		response.setErrors(null);
 		return response;
 	}
 }
