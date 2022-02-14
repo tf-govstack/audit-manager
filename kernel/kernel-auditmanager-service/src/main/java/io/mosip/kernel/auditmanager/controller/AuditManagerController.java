@@ -3,6 +3,7 @@ package io.mosip.kernel.auditmanager.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -34,6 +35,13 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @Tag(name = "Audit manager controller", description = "Rest endpoints which consist of operations related to Audit Management")
 public class AuditManagerController {
+
+	@Value("${mosip.kernel.auditmanager.add-audit.api-id:mosip.kernel.auditmanager.addAudit}")
+	private String apiId;
+
+	@Value("${mosip.kernel.auditmanager.add-audit.api-version:1.0}")
+	private String apiVersion;
+	
 	/**
 	 * AuditManager Service field with functions related to auditing
 	 */
@@ -59,6 +67,9 @@ public class AuditManagerController {
 	public ResponseWrapper<AuditResponseDto> addAudit(@RequestBody @Valid RequestWrapper<AuditRequestDto> requestDto) {
 		ResponseWrapper<AuditResponseDto> response = new ResponseWrapper<>();
 		response.setResponse(service.addAudit(requestDto.getRequest()));
+		response.setId(apiId);
+		response.setVersion(apiVersion);
+		response.setErrors(null);
 		return response;
 	}
 }
