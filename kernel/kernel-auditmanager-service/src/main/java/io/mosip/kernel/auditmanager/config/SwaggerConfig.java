@@ -14,11 +14,9 @@ import io.swagger.v3.oas.models.servers.Server;
 @Configuration
 public class SwaggerConfig {
 
-	@Autowired
-	private OpenApiProperties openApiProperties;
-
+	
 	@Bean
-	public OpenAPI openApi() {
+	public OpenAPI openApi(@Autowired OpenApiProperties openApiProperties) {
 		OpenAPI api = new OpenAPI().components(new Components())
 				.info(new Info().title(openApiProperties.getInfo().getTitle())
 						.version(openApiProperties.getInfo().getVersion())
@@ -26,9 +24,9 @@ public class SwaggerConfig {
 						.license(new License().name(openApiProperties.getInfo().getLicense().getName())
 								.url(openApiProperties.getInfo().getLicense().getUrl())));
 
-		openApiProperties.getService().getServers().forEach(server -> {
-			api.addServersItem(new Server().description(server.getDescription()).url(server.getUrl()));
-		});
+		openApiProperties.getService().getServers().forEach(server -> 
+			api.addServersItem(new Server().description(server.getDescription()).url(server.getUrl()))
+		);
 		return api;
 	}
 
