@@ -223,6 +223,7 @@
 		<kernel.dataaccess-hibernate.version>1.1.5.3</kernel.dataaccess-hibernate.version>
 		<kernel.audit-api.version>1.1.5.6-SNAPSHOT</kernel.audit-api.version>
 		<kernel.logger.version>1.1.5.3</kernel.logger.version>
+		<fasterxml.jackson.module.jsr310.version>2.9.10</fasterxml.jackson.module.jsr310.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -264,6 +265,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<version>${spring.security.test.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>${fasterxml.jackson.module.jsr310.version}</version>
 		</dependency>
 	</dependencies>
 	
