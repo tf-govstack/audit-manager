@@ -9,10 +9,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import io.mosip.auditmanager.test.AuditManagerTestBootApplication;
 import io.mosip.kernel.auditmanager.dto.AuditResponseDto;
+import io.mosip.kernel.auditmanager.repository.AuditRepository;
 import io.mosip.kernel.auditmanager.request.AuditRequestDto;
 import io.mosip.kernel.auditmanager.service.impl.AuditManagerServiceImpl;
 
@@ -22,6 +24,9 @@ public class AuditServiceTest {
 
 	@Autowired
 	private AuditManagerServiceImpl service;
+
+	@MockBean
+	private AuditRepository auditRepository;
 
 	@Test
 	public void auditServiceTest() {

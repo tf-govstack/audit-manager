@@ -35,7 +35,7 @@ public class AuditEventTest {
 	@Test
 	public void auditBuilderTest() {
 
-		Mockito.when(auditRepository.create(ArgumentMatchers.any(Audit.class))).thenReturn(new Audit());
+		Mockito.when(auditRepository.save(ArgumentMatchers.any(Audit.class))).thenReturn(new Audit());
 
 		AuditRequestBuilder auditRequestBuilder = new AuditRequestBuilder();
 
@@ -54,7 +54,7 @@ public class AuditEventTest {
 	@Test(expected = AuditManagerException.class)
 	public void auditBuilderExceptionTest() {
 
-		Mockito.when(auditRepository.create(ArgumentMatchers.any(Audit.class))).thenReturn(new Audit());
+		Mockito.when(auditRepository.save(ArgumentMatchers.any(Audit.class))).thenReturn(new Audit());
 
 		AuditRequestBuilder auditRequestBuilder = new AuditRequestBuilder();
 
