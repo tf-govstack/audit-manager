@@ -221,7 +221,7 @@
 		<jacoco.maven.plugin.version>0.8.5</jacoco.maven.plugin.version>
 		<sonar.coverage.exclusions>**/dto/**,**/constant/**,**/config/**,**/httpfilter/**,**/cache/**,**/entity/**,**/model/**,**/exception/**,**/repository/**,**/request/**,**/spi/**,"**/proxy/**","**/AuditManagerBootApplication.java"</sonar.coverage.exclusions>
 		<sonar.cpd.exclusions>**/dto/**,**/entity/**,**/config/**</sonar.cpd.exclusions>
-		<fasterxml.jackson.module.jsr310.version>2.9.10</fasterxml.jackson.module.jsr310.version>
+		<fasterxml.jackson.module.jsr310.version>2.12.0</fasterxml.jackson.module.jsr310.version>
 	</properties>
 	<dependencies>
 		<dependency>
