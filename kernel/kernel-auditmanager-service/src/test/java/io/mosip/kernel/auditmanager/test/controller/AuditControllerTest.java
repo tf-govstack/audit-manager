@@ -24,6 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.mosip.auditmanager.test.AuditManagerTestBootApplication;
 import io.mosip.kernel.auditmanager.dto.AuditResponseDto;
+import io.mosip.kernel.auditmanager.repository.AuditRepository;
 import io.mosip.kernel.auditmanager.request.AuditRequestDto;
 import io.mosip.kernel.auditmanager.service.impl.AuditManagerServiceImpl;
 import io.mosip.kernel.core.http.RequestWrapper;
@@ -42,6 +43,9 @@ public class AuditControllerTest {
 
 	@Autowired
 	private ObjectMapper objectMapper;
+
+	@MockBean
+	private AuditRepository auditRepository;
 
 	@WithUserDetails("reg-processor")
 	@Test

@@ -17,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import io.mosip.auditmanager.test.AuditManagerTestBootApplication;
+import io.mosip.kernel.auditmanager.repository.AuditRepository;
 import io.mosip.kernel.auditmanager.service.impl.AuditManagerServiceImpl;
 
 @SpringBootTest(classes = { AuditManagerTestBootApplication.class })
@@ -28,6 +29,9 @@ public class AuditExceptionTest {
 
 	@MockBean
 	private AuditManagerServiceImpl service;
+
+	@MockBean
+	private AuditRepository auditRepository;
 
 	@WithUserDetails("reg-processor")
 	@Test
