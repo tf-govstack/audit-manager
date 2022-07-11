@@ -5,25 +5,25 @@
 	<groupId>io.mosip.kernel</groupId>
 
 	<artifactId>kernel-auditmanager-service</artifactId>
-	<version>1.2.1-SNAPSHOT</version>
+	<version>1-2-1-j17-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- maven -->
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<maven.compiler.version>3.8.0</maven.compiler.version>
 
 		<maven.jar.plugin.version>3.0.2</maven.jar.plugin.version>
 		<maven.war.plugin.version>3.1.0</maven.war.plugin.version>
-		<maven.javadoc.version>3.2.0</maven.javadoc.version>
+		<maven.javadoc.version>3.4.0</maven.javadoc.version>
 		<maven-shade-plugin.version>2.3</maven-shade-plugin.version>
 
 		<!-- spring -->
-		<spring.boot.version>2.0.2.RELEASE</spring.boot.version>
-		<spring.data.jpa.version>2.0.7.RELEASE</spring.data.jpa.version>
-		<spring.security.test.version>5.0.5.RELEASE</spring.security.test.version>
-		<spring-cloud-config.version>2.0.4.RELEASE</spring-cloud-config.version>
+		<spring.boot.version>2.7.0</spring.boot.version>
+		<spring.data.jpa.version>2.7.0</spring.data.jpa.version>
+		<spring.security.test.version>5.7.1</spring.security.test.version>
+		<spring-cloud-config.version>3.1.3</spring-cloud-config.version>
 
 		<!-- swagger -->
 		<swagger.core.version>2.0.7</swagger.core.version>
@@ -52,7 +52,7 @@
 		<hibernate.validator.version>6.0.12.Final</hibernate.validator.version>
 
 		<!-- test -->
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.2</junit.version>
 		<mockito.version>2.23.4</mockito.version>
 		<powermock.version>1.7.4</powermock.version>
 		<powermock.beta.version>2.0.7</powermock.beta.version>
@@ -82,7 +82,7 @@
 		<commons.configuration2.version>2.2</commons.configuration2.version>
 		<apache.httpcomponents.version>4.5.6</apache.httpcomponents.version>
 		<guava.version>19.0</guava.version>
-		<lombok.version>1.18.8</lombok.version>
+		<lombok.version>1.18.22</lombok.version>
 		<jsch.version>0.1.54</jsch.version>
 		<sshd.version>1.4.0</sshd.version>
 		<itextcore.version>7.1.0</itextcore.version>
@@ -93,7 +93,7 @@
 		<velocity.tool.version>2.0</velocity.tool.version>
 		<datamapper.orika>1.5.2</datamapper.orika>
 		<modelmapper.version>2.1.1</modelmapper.version>
-		<bouncycastle.version>1.66</bouncycastle.version>
+		<bouncycastle.version>1.46</bouncycastle.version>
 		<icu4j.version>63.1</icu4j.version>
 		<seventeam-otp.version>1.0.0</seventeam-otp.version>
 		<google.zxing.version>3.3.3</google.zxing.version>
@@ -112,20 +112,20 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- maven -->
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<maven.compiler.version>3.8.0</maven.compiler.version>
 
 		<maven.jar.plugin.version>3.0.2</maven.jar.plugin.version>
 		<maven.war.plugin.version>3.1.0</maven.war.plugin.version>
-		<maven.javadoc.version>3.2.0</maven.javadoc.version>
+		<maven.javadoc.version>3.4.0</maven.javadoc.version>
 		<maven-shade-plugin.version>2.3</maven-shade-plugin.version>
 
 		<!-- spring -->
-		<spring.boot.version>2.0.2.RELEASE</spring.boot.version>
-		<spring.data.jpa.version>2.0.7.RELEASE</spring.data.jpa.version>
-		<spring.security.test.version>5.0.5.RELEASE</spring.security.test.version>
-		<spring-cloud-config.version>2.0.4.RELEASE</spring-cloud-config.version>
+		<spring.boot.version>2.7.0</spring.boot.version>
+		<spring.data.jpa.version>2.7.0</spring.data.jpa.version>
+		<spring.security.test.version>5.7.1</spring.security.test.version>
+		<spring-cloud-config.version>3.1.3</spring-cloud-config.version>
 
 		<!-- swagger -->
 		<swagger.core.version>2.0.7</swagger.core.version>
@@ -154,7 +154,7 @@
 		<hibernate.validator.version>6.0.12.Final</hibernate.validator.version>
 
 		<!-- test -->
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.2</junit.version>
 		<mockito.version>2.23.4</mockito.version>
 		<powermock.version>1.7.4</powermock.version>
 		<powermock.beta.version>2.0.7</powermock.beta.version>
@@ -184,7 +184,7 @@
 		<commons.configuration2.version>2.2</commons.configuration2.version>
 		<apache.httpcomponents.version>4.5.6</apache.httpcomponents.version>
 		<guava.version>19.0</guava.version>
-		<lombok.version>1.18.8</lombok.version>
+		<lombok.version>1.18.22</lombok.version>
 		<jsch.version>0.1.54</jsch.version>
 		<sshd.version>1.4.0</sshd.version>
 		<itextcore.version>7.1.0</itextcore.version>
@@ -195,7 +195,7 @@
 		<velocity.tool.version>2.0</velocity.tool.version>
 		<datamapper.orika>1.5.2</datamapper.orika>
 		<modelmapper.version>2.1.1</modelmapper.version>
-		<bouncycastle.version>1.66</bouncycastle.version>
+		<bouncycastle.version>1.46</bouncycastle.version>
 		<icu4j.version>63.1</icu4j.version>
 		<seventeam-otp.version>1.0.0</seventeam-otp.version>
 		<google.zxing.version>3.3.3</google.zxing.version>
@@ -212,13 +212,13 @@
 		<micrometer.core.version>1.4.2</micrometer.core.version>
 		<micrometer.registry.prometheus.version>1.4.2</micrometer.registry.prometheus.version>
 		<springdoc.version>1.5.10</springdoc.version>
-		<kernel.core.version>1.2.1-SNAPSHOT</kernel.core.version>
-		<kernel.auth-adapter.version>1.2.1-SNAPSHOT</kernel.auth-adapter.version>
-		<kernel.applicant-type.version>1.2.1-SNAPSHOT</kernel.applicant-type.version>
-		<kernel.dataaccess-hibernate.version>1.2.1-SNAPSHOT</kernel.dataaccess-hibernate.version>
-		<kernel.audit-api.version>1.2.1-SNAPSHOT</kernel.audit-api.version>
-		<kernel.logger.version>1.2.1-SNAPSHOT</kernel.logger.version>
-		<jacoco.maven.plugin.version>0.8.5</jacoco.maven.plugin.version>
+		<kernel.core.version>1-2-1-j17-SNAPSHOT</kernel.core.version>
+		<kernel.auth-adapter.version>1-2-1-j17-SNAPSHOT</kernel.auth-adapter.version>
+		<kernel.applicant-type.version>1-2-1-j17-SNAPSHOT</kernel.applicant-type.version>
+		<kernel.dataaccess-hibernate.version>1-2-1-j17-SNAPSHOT</kernel.dataaccess-hibernate.version>
+		<kernel.audit-api.version>1-2-1-j17-SNAPSHOT</kernel.audit-api.version>
+		<kernel.logger.version>1-2-1-j17-SNAPSHOT</kernel.logger.version>
+		<jacoco.maven.plugin.version>0.8.8</jacoco.maven.plugin.version>
 		<sonar.coverage.exclusions>**/dto/**,**/constant/**,**/config/**,**/httpfilter/**,**/cache/**,**/entity/**,**/model/**,**/exception/**,**/repository/**,**/request/**,**/spi/**,"**/proxy/**","**/AuditManagerBootApplication.java"</sonar.coverage.exclusions>
 		<sonar.cpd.exclusions>**/dto/**,**/entity/**,**/config/**</sonar.cpd.exclusions>
 		<fasterxml.jackson.module.jsr310.version>2.12.0</fasterxml.jackson.module.jsr310.version>
@@ -285,6 +285,12 @@
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-jsr310</artifactId>
 			<version>${fasterxml.jackson.module.jsr310.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	
@@ -491,7 +497,7 @@
 				<dependency>
 					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-auth-adapter</artifactId>
-					<version>1.2.1-SNAPSHOT</version>
+					<version>1-2-1-j17-SNAPSHOT</version>
 				</dependency>
 			</dependencies>
 			<build>
