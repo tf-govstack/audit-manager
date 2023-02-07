@@ -47,7 +47,7 @@ public class AuditHandlerImpl implements AuditHandler<AuditRequestDto> {
 		AuditUtils.validateAuditRequest(auditRequest);
 
 		Audit event = modelMapper.map(auditRequest, Audit.class);
-		auditRepository.create(event);
+		auditRepository.save(event);
 		return true;
 	}
 
